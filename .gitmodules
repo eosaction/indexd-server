@@ -1,0 +1,3 @@
+[submodule "indexd"]
+	path = indexd
+	url = https://github.com/eosaction/indexd
