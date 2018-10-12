@@ -435,7 +435,7 @@ Add receive a response like this:
 ]
 ```
 
-# Get balance from label
+### Get balance from label
 
 ```
 http://localhost:{SERVER_PORT}/l/16q7Gtg5yd6R4cL7sYCaGYPcHXwxJF4KvT/balance
