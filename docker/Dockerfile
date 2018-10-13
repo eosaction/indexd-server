@@ -18,7 +18,7 @@ RUN npm install -g node-gyp forever
 RUN mkdir -p /data/indexd/
 RUN mkdir /indexd
 WORKDIR /indexd
-RUN git clone https://github.com/CounterpartyXCP/indexd-server.git /indexd
+RUN git clone https://github.com/eosaction/indexd-server.git /indexd
 RUN npm install
 
 # start script
