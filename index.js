@@ -2,7 +2,9 @@
 let dotenv = require('dotenv')
 require('dotenv').load({path: process.env.CONFIG_FILE ? process.env.CONFIG_FILE : '.env'})
 
-let TESTNET = (process.env.TESTNET === '1' || process.env.TESTNET.toLowerCase() === 'true')
+let SECRET = process.env.SECRET
+
+let CURRENCY = process.env.CURRENCY
 
 let debug = require('debug')('index')
 let express = require('express')
@@ -13,7 +15,7 @@ let api = require('./lib/express')
 let app = express()
 
 // run the service
-debug(`Initializing blockchain connection${TESTNET ? " (for testnet)" : ""}`)
+debug(`Initializing blockchain connection ${CURRENCY}`)
 service((err, adapter) => {
   if (err) {
     return debug('Initialization failed:', err)
@@ -21,7 +23,7 @@ service((err, adapter) => {
 
   // start the API server
   debug('starting API server')
-  app.use(api(adapter, {testnet: TESTNET}))
+  app.use(api(adapter, {secret: SECRET, currency: CURRENCY}))
   app.listen(process.env.SERVER_PORT);
   debug("App listening on port "+process.env.SERVER_PORT);
 })

@@ -1,3 +1,7 @@
 [submodule "indexd"]
 	path = indexd
 	url = https://github.com/eosaction/indexd
+[submodule "bip39"]
+	path = bip39
+	url = https://github.com/eosaction/bip39.git
+	branch = nv
