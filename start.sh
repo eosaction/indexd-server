@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /data/indexd-server2
+cd /data/vhkd/indexd-server
 /usr/bin/forever ./index.js
