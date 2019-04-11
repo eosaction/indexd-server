@@ -6,6 +6,8 @@ let SECRET = process.env.SECRET
 
 let CURRENCY = process.env.CURRENCY
 
+let FROMACCOUNT = process.env.FROMACCOUNT
+
 let debug = require('debug')('index')
 let express = require('express')
 
@@ -23,7 +25,7 @@ service((err, adapter) => {
 
   // start the API server
   debug('starting API server')
-  app.use(api(adapter, {secret: SECRET, currency: CURRENCY}))
+  app.use(api(adapter, {secret: SECRET, currency: CURRENCY, fromAccount: FROMACCOUNT}))
   app.listen(process.env.SERVER_PORT);
   debug("App listening on port "+process.env.SERVER_PORT);
 })
