@@ -24,6 +24,9 @@ The settings in bitcoin.conf are the "server" settings for the ZMQ publisher.  T
 
 
 ## Install
+
+Node version: <= v8.16.0
+
 Install the node dependencies:
 ```shell
 npm install
