@@ -438,6 +438,14 @@ Add receive a response like this:
 ]
 ```
 
+### EXPLOERE
+
+
+BTG TESTNET:
+
+https://test-explorer.bitcoingold.org/insight/
+
+
 ### Get balance from label
 
 ```
