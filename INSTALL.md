@@ -1,3 +1,5 @@
+NODEJS : v6.17.1
+
 1.
 ubuntu:
 apt-get install libtool
